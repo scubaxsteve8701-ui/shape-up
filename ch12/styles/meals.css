@@ -1,0 +1,85 @@
+/* Shape Up 12 - the Meal Plan order form */
+
+section > p {
+    font-size: 90%;
+}
+.required {
+    color: red;
+}
+
+/* the groups */
+fieldset {
+    border: 1px solid #ccc;
+    padding: .5em 1em 1em 1em;
+    margin: 1.25em 0;
+}
+legend {
+    color: maroon;
+    font-weight: bold;
+    padding: 0 .1em;
+}
+
+/* labels and controls stacked one above the other */
+fieldset > label {
+    display: block;
+    margin: .75em 0 .2em 0;
+}
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: .3em;
+    font-family: inherit;
+    font-size: 95%;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background-color: white;
+}
+/* required entries that are still empty or invalid get a red border */
+input:required:invalid {
+    border: 2px solid red;
+}
+
+/* radio buttons and check boxes on one line */
+.question {
+    margin: 1em 0 .3em 0;
+}
+.choices label {
+    margin-right: .4em;
+}
+textarea {
+    margin-top: .75em;
+    resize: vertical;
+}
+
+/* the buttons: base class plus one class for each button */
+fieldset.buttons {
+    padding: 1em 1.5em;
+}
+.button {
+    width: 7.5em;
+    padding: .5em 0;
+    margin-right: 1em;
+    border: 2px solid #333;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    font-size: 95%;
+    cursor: pointer;
+}
+.submit_button {
+    background-color: steelblue;
+}
+.submit_button:hover,
+.submit_button:focus {
+    background-color: #2c5d86;      /* darker blue on hover */
+}
+.reset_button {
+    background-color: maroon;
+}
+.reset_button:hover,
+.reset_button:focus {
+    background-color: #b22222;      /* brighter red on hover */
+}
