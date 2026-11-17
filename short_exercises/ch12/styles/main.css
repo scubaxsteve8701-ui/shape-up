@@ -1,0 +1,110 @@
+/* variables */
+:root {
+    --light: white;
+    --dark: black;
+    --valid: green;
+    --invalid: red;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 90%;
+    max-width: 34em;
+    margin: auto;
+    padding: 1em;
+}
+h1, h2, h3 {
+    padding-bottom: .5em;
+}
+h1 {
+    font-size: 150%;
+}
+form, input, select, textarea {
+    width:100%;
+}
+input, select, button {
+    font-size: inherit;
+    padding: .25em;
+    margin-bottom: .5em;
+    border-radius: 5px;
+}
+label {
+    display: block;
+}
+
+/* the groups */
+form {
+    font-size: 80%;
+}
+fieldset {
+    border: 1px solid #ccc;
+    padding: .25em 1em .25em 1em;
+    margin-bottom: 1.5em;
+}
+legend {
+    font-weight: bold;
+    font-size: 115%;
+    padding: 0 .1em;
+}
+label {
+    margin-top: .25em;
+    margin-bottom: .15em;
+}
+.key {
+    text-decoration: underline;     /* shows the access key */
+}
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    border: 1px solid #999;
+    font-family: inherit;
+    background-color: white;
+}
+textarea {
+    padding: .25em;
+    border-radius: 5px;
+    margin-bottom: .75em;
+    font-size: inherit;
+}
+
+/* validation: red border when invalid, green border when valid */
+.validate input:invalid {
+    border: 1px solid var(--invalid);
+}
+.validate input:valid {
+    border: 1px solid var(--valid);
+}
+
+/* the buttons: a base class plus a class for each button */
+.button {
+    width: 8em;
+    padding: .5em 0;
+    margin-right: .25em;
+    border: 1px solid #333;
+    color: var(--light);
+    font-weight: bold;
+    cursor: pointer;
+}
+.submit {
+    background-color: darkgreen;
+}
+.submit:hover,
+.submit:focus {
+    background-color: forestgreen;
+}
+.reset {
+    background-color: #e23d28;
+}
+.reset:hover,
+.reset:focus {
+    background-color: darkred;
+}
