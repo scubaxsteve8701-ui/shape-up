@@ -1,0 +1,114 @@
+/* Shape Up 11 - the Calorie Counter table */
+
+/* the page heading */
+#calories,
+section h1 {
+    width: 100%;
+}
+section h1 {
+    text-align: center;
+    color: maroon;
+    margin-bottom: .5em;
+}
+
+/* the caption: read by screen readers but hidden visually,
+   since the h1 already titles the table */
+#calories caption {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/* ==============================================
+   THE TABLE ON LARGE SCREENS
+   ============================================== */
+#calories {
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+#calories th,
+#calories td {
+    padding: .25em 1em;
+    text-align: left;
+    vertical-align: top;
+}
+#calories thead th {
+    background-color: steelblue;
+    color: white;
+    padding: .5em 1em;
+}
+#calories tbody th {
+    font-weight: bold;     /* the category name */
+}
+#calories .right {
+    text-align: right;     /* the calories column */
+}
+#calories tbody:first-of-type tr:first-child > * {
+    padding-top: .5em;     /* space below the header row */
+}
+#calories tbody:last-of-type tr:last-child > * {
+    padding-bottom: .5em;  /* space above the bottom border */
+}
+
+/* medium screens: tighter cells so the table fits beside the aside */
+@media screen and (min-width: 768px) and (max-width: 999px) {
+    #calories th,
+    #calories td,
+    #calories thead th {
+        padding-left: .5em;
+        padding-right: .5em;
+    }
+}
+
+/* ==============================================
+   THE TABLE ON SMALL SCREENS
+   ============================================== */
+@media screen and (max-width: 767px) {
+    /* display the table parts as blocks so each food stacks vertically */
+    #calories,
+    #calories tbody,
+    #calories tr,
+    #calories th,
+    #calories td {
+        display: block;
+    }
+    #calories thead {
+        display: none;     /* column headings aren't needed */
+    }
+    #calories th,
+    #calories td {
+        padding: .1em .75em;
+    }
+    #calories tbody th {
+        background-color: steelblue;   /* the category bar */
+        color: white;
+        padding: .15em .75em;
+    }
+    #calories tr {
+        padding-bottom: .4em;
+    }
+    #calories .food {
+        font-weight: bold;
+        padding-top: .3em;
+    }
+    #calories .right {
+        text-align: left;
+    }
+    #calories .cal::after {
+        content: " calories";
+    }
+    #calories tbody:first-of-type tr:first-child > *,
+    #calories tbody:last-of-type tr:last-child > * {
+        padding-top: .1em;
+        padding-bottom: .1em;
+    }
+    #calories tbody:first-of-type tr:first-child > th {
+        padding-top: .15em;
+    }
+    #calories tbody th + .food {
+        padding-top: .3em;
+    }
+}
